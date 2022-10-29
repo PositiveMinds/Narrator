@@ -205,3 +205,34 @@ body {
 .modal-popup-buttons .modal-button:last-of-type {
   margin-left: 0.2rem;
 }
+
+
+/* MEDIA  QUERIES=========================================*/
+@media only screen and (max-width: 900px) {
+  .modal-content-right .modal-heading {
+    font-size: 1.2rem;
+  }
+
+  .modal-content-right .subheading {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .modalOverlay .modalPopup {
+    width: 98%;
+  }
+
+  .modal-popup-form .input-field input::placeholder {
+    color: var(--silver-grey);
+    font-size: 1rem;
+  }
+
+  .modal-popup-form .input-field input::placeholder {
+    font-size: .9rem;
+  }
+
+  .modal-popup-buttons .modal-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
