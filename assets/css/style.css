@@ -24,7 +24,7 @@ a {
 }
 
 body {
-  background: var(--bodyBg);
+  background: var(--orange);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 62.5%;
 }
