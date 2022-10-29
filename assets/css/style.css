@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --white: #ffffff;
+  --orange: #f68b1e;
+  --lightGrey: #c7c7cd;
+  --silver-grey: #999999;
+  --text: #75757a;
+  --bodyBg: #d35400;
+  --main-font-size: 12px;
+  --transition: all 500ms ease;
+  --border-radius: 5px;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: var(--black);
+}
+
+body {
+  background: var(--bodyBg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 62.5%;
+}
+
+
+/* Website Load modal popup=========================== */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(3px);
+}
+.modalOverlay .close-popup-modal {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  color: var(--dark-text);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.modalOverlay .close-popup-modal:hover{
+  color: var(--bodyBg);
+}
+.modalOverlay .modalPopup {
+  width: 50%;
+  height: fit-content;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.425);
+}
+.modalOverlay .modalPopup .modalContent {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: inherit;
+  overflow: hidden;
+}
+
+.modal-content-left {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal-content-right .subheading {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.modal-content-right .small {
+  font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 20px;
+  padding-bottom: 0.5rem;
+  color: var(--dark-text);
+}
+
+.modal-content-right .modal-heading {
+  margin: 0 0 1rem 0;
+
+  font-size: 1.6rem;
+}
+.modal-content-left img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-popup-form {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.modal-popup-form .input-field {
+  background: var(--white);
+  width: 100%;
+  position: relative;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--lightGrey);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+.modal-popup-form .input-field:focus-within {
+  border: 1px solid var(--orange);
+}
+.modal-popup-form .input-field:focus-within .mail-icon {
+  fill: var(--orange);
+}
+.modal-popup-form .input-field input {
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.7rem;
+  background: transparent;
+  border: 0;
+  /* border: 1px solid var(--silver-grey); */
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+.modal-popup-form .input-field input:focus {
+  outline: none;
+}
+
+.modal-popup-form .input-field input::placeholder {
+  color: var(--silver-grey);
+  font-size: 1rem;
+}
+.modal-popup-form .input-field .mail-icon {
+  font-size: 1rem;
+  position: absolute;
+  left: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--silver-grey);
+}
+
+.modal-popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.modal-popup-buttons .modal-button {
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: var(--orange);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.modal-popup-buttons .modal-button:hover {
+  background: var(--hover);
+  color: var(--white) !important;
+}
+.modal-popup-buttons .modal-button:first-of-type {
+  margin-right: 0.2rem;
+}
+.modal-popup-buttons .modal-button:last-of-type {
+  margin-left: 0.2rem;
+}
